@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- colspan
+    테이블 셀(일반적으로 <td>나 <th> 요소)에 적용되는 속성입니다.
+    이 속성을 사용하면 하나의 셀이 몇 개의 열(column)을 차지할지를 지정할 수 있습니다.
+    예를 들어, colspan="2"는 해당 셀이 인접한 두 열을 병합하여 사용함을 의미합니다.
+    
+    <tr> (table row)
+        용도: 테이블에서 행(row)을 나타내며, <td> 또는 <th> 요소들을 포함합니다.
+        예시: <tr> ... </tr> 사이에 여러 셀 요소들이 들어갑니다.
+
+    <td> (table data)
+        : 테이블의 데이터 셀을 나타냅니다. 일반적으로 표의 내용(데이터)을 담는 역할을 합니다.
+
+        th (table header)
+        용도: 테이블의 헤더 셀을 나타내며, 주로 제목이나 범주를 표시할 때 사용됩니다. 기본적으로 굵은 글씨와 가운데 정렬이 적용됩니다.
+        예시: <th>제목</th> -->
+
+
+<style>
+table{
+    text-align: center;
+}
+</style>
+
+<table border="1" width = "700">
+
+<tr>
+    <td rowspan="3">
+        <img src="" alt="" width=""> 
+        <!-- <img src="../image/인물.jpg" alt="" width="100">  -->
+    </td>
+    <td colspan="4">
+        <h2>이력서</h2>
+    </td>
+</tr>
+
+<tr>
+<td rowspan="2">성명</td>
+<td colspan ="2" rowspan="2">&nbsp;유새별</td>
+<td>생년월일</td>
+</tr>
+
+<tr>
+    <td>&nbsp;2001.06.01</td>
+</tr>
+
+
+<tr>
+    <td>이메일</td>
+
+    <td colspan="4">&nbsp;YooSaebyeol@gmiall.com</td>
+</tr>
+
+<tr>
+    <td>현주소</td>
+    <td colspan="4">&nbsp;경기도 성남시 분당구 분당로 23 (서현동)</td>
+</tr>
+
+<tr>
+    <td>연락처</td>
+    <td colspan="4">&nbsp;010-2771-1925</td>
+</tr>
+
+<tr>
+<td>기간</td>
+<td colspan="4">&nbsp;2021-03~2025-02</td>
+</tr>
+
+<tr>
+    <td colspan = "4">학력사항</td>
+    <td colspan="4">&nbsp;중앙대학교</td>
+</td>
+</tr>
+<tr>    
+    <td colspan = "4">비고</td>
+    <td colspan="4">&nbsp;영어, 중국어 특기자</td> 
+</tr>
+
+
+
+
+</table>
+
+
+<table border="1">
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+    </tr>
+    <tr>
+      <td colspan="2">Cell spanning 2 columns</td>
+      <td>Data</td>
+    </tr>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+      <td>Data 3</td>
+    </tr>
+  </table>
+
+  
+</body>
+</html>

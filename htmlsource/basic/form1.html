@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form : 다른 form을 자식요소로 사용할 수 없음. 
+                <form > <form ></form> </form> 안됨
+    속성
+    ★ 1) action : 경로(전송한 정보를 처리할 웹페이지 URL)
+    - "" : (빈경로일 시)자기 자신
+    ★ 2) method : GET(기본방식), POST 
+    ----필수요소
+    3) autocomplete : 자동 완성 사용 여부( "on" default)
+    4) name : 고유한 양식의 이름
+    5) novalidate : 서버로 데이터 전송 시 유효성 검사하지 않음
+        - 속성을 지정 안하면 
+            -email : 입력값이 존재할 때 간단하게 이메일 형식이 맞는지 확인
+            -required :필수입력
+
+    http://192.168.55.59:5500/htmlsource/basic/form1.html
+
+    http://ip 주소 : 포트번호/ 이후로는 자기자신 basic/form1.html
+    
+    <GET> 방식일 때 데이터를 서버로 보내는 방식, 아래와 같은 형태로 따라감
+        =  서버경로 ? 키 = 값 & 키= 값 &...
+        
+         키 : name
+        값 : text(입력값), checkbox, radio(value)
+
+    서버로 데이터 보내고 싶을 때 method 가 get 방식일!
+ 
+
+    oracle 포트번호 : 1521... 무언가 열기 위해서 (고정된) 해당 서비스의 포트번호가 필요
+
+    input type
+    1) text : 문자 한 행 입력
+    2)radio : 여러 개 중에서 하나  선택 용으로 사용
+    3)checknox : 여러 개 중에서 여러 개 선택 용으로 사용
+    4)button : 모양만 버튼 모양으로 나옴
+    5)reset : 폼 안의 입력 내용 초기화
+    6) submit : action 이 지정한 곳 으로 폼 내용 전송(경로 미지정 시 자신한테 action)
+
+
+     -->
+    <form action="" method="get" autocomplete="off" name="myForm" novalidate></form>
+    <!-- from : 감싸는 역할 -->
+
+    <!-- GET : 안 써줄 시 default 방식 -->
+
+    <form action="" method="get">
+      <!-- input -->
+      <div><input type="text" name="text1" /></div>
+      <!-- input t 입력 시 -->
+      <div><input type="text" name="" id="" required /></div>
+
+      <!-- input:r 입력 시|같은 이름 지정 시 버튼 하나만 선택 가능 -->
+      <div>
+        <input type="radio" name="fruits" id="" value="사과" />사과
+        <input type="radio" name="fruits" id="" value="포도" /> 포도
+        <input type="radio" name="fruits" id="" value="바나나" />바나나
+      </div>
+
+      <!-- input:c 입력 시 -->
+      <div>
+        <input type="checkbox" name="fruits1" id="" value="사과" />사과
+        <input type="checkbox" name="fruits1" id="" value="바나나" />바나나
+        <input type="checkbox" name="fruits1" id="" value="포도" />포도
+      </div>
+
+      <div>
+        <input type="color" name="" id="" />
+        <input type="number" name="" id="" />
+      </div>
+
+      <div>
+        <input type="date" name="" id="" />
+        <input type="datetime" name="" id="" />
+        <input type="datetime-local" name="" id="" />
+        <input type="week" name="" id="" />
+        <input type="month" name="" id="" />
+        <input type="time" name="" id="" />
+      </div>
+
+      <!-- placeholder 무엇인지 알려줌-->
+      <div>
+        <input type="email" name="" id="" placeholder="email" />
+        <input type="password" name="" id="" placeholder="password" />
+      </div>
+
+      <div>
+        <input type="file" name="file" id="" />
+      </div>
+
+      <!-- input:b 입력 시 -->
+      <div>
+        <input type="button" value="버튼" />
+        <input type="submit" value="submit" />
+        <input type="reset" value="reset" />
+      </div>
+
+      <div>
+        <textarea name="" id="" rows="10" cols="30"></textarea>
+      </div>
+
+      <div>
+        <select name="" id="">
+          <option value="사과">사과</option>
+          <option value="포도">포도</option>
+          <option value="딸기">딸기</option>
+          <option value="바나나">바나나</option>
+        </select>
+      </div>
+    </form>
+  </body>
+</html>

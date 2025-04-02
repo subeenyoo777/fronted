@@ -1,0 +1,110 @@
+웹(앱) 개발 : 프론트 / 백엔드
+
+ - front : html, css, javascript, react, vue ...
+ - backed : node.js, java, python, 닷넷..
+ - 기반기술 : 서버, 네트워크, ..
+ 
+ - 브라우저 기반
+ - 브라우저를 통해서 실행될 수 있는 언어 
+ 
+  1. HTML (HyperText Markup Language)
+    웹 브라우저에서 표시되도록 설계된 표준 마크업 언어
+    태그로 구성됨. 
+    화면 구조 설계
+
+
+2. CSS(Cascding Style Sheets) : 디자인
+ - css 파일 위치
+    1) head 태그 안: 길지 않다면 <style>~~</style>
+    2) inline 처리 : 비추천 style ="color:blueviolte" 
+    3) 외부파일(추천)  link
+
+ - 디자인을 반영할 요소 선택
+ 1) 태그 선택자    
+ 2) 아이디 : #
+ 3) 클래스 : .
+ 4) 전체 : *
+ 5) 자손(자식) : >, 공백
+ 6) 형제 선택자
+   (1)인접 형제 : + 
+   (2)모든 형제 : ~
+ 7) 그룹 : 선택자1, 선택자2
+           여러 선택자를 한꺼번에 동일한 디자인 적용  
+ 8) 속성 선택자
+  -[속성명] :    [target] target 속성에 있는 모든 요소. 
+  -[속성명 = 값] :   [target="_blank"] _blank 값과 일치하는 요소
+  -[속성명 ~= 값] :    [title~="dog"]  값과 정.확.히 일치하는, dog 포함된 요소
+  -[속성명 ^= 값] :  [class^="test"] 특정 값으로 시작.
+  -[속성명 $= 값] : [class$="test"]  특정 값으로 끝남. 
+  -[속성명 *= 값] : 값이 포함됨.
+
+ 9) 가상(pseudo) 클래스 선택자
+  - a tag
+    : link 
+    : active
+    : visited
+
+ - 다른 요소
+
+    : hover => 특정 요소에 마우스가 올라간 상황
+    : focus => 특정 요소에 초점이 맞춰진 상황
+
+ - ui 변화
+    : disabled
+    : checked => radio, checked 요소가 선택된 상황    
+
+ 10) 가상 요소 선택자
+ ::before
+ ::after
+
+ 11) 구조 선택자
+    : first-child
+    : last-child
+    : nth-child(n)
+    n -> 0부터 시작
+    nth-child(2n) => 짝수
+    nth-child(2n+1) => 홀수
+    nth-child(-n+3) => 첫번째~세번째
+        -0 + 3 = 3
+        -1 + 3 = 2
+        -2 + 3 = 1
+        -3 + 3 = 0 (여기서부터는 무시됨)
+
+ 12) 형태 구조 선택자 : 태그명 사용
+    : first-of-type
+    : last-of-type
+    : nth-last-of-type(n)
+ 
+ 13) 부정 선택자
+    E:not(S) => S가 아닌 E 선택
+
+ - 디자인 
+  참고 : css/basic
+
+외부 파일(추천) : 
+
+  1. 색상명
+   => red, blue
+
+
+
+
+ - color
+  1)색상명 : red, blue..
+  2) 16진수 : #13ffee
+  3) RGB : rgb(0, 255,0)/ rgba(0,255,0,0.5)
+
+ - 단위
+  1) px:고정(브라우저 크기 줄이면 줄인 방향으로 스크롤 생김)
+  2)% : 상대(부모가 만들어준 공간에서의 비율)
+  3)em : em 단위가 쓰여진 곳의 폰트 사이즈 배수
+  4) rem : 루트 요소의 크기를 기준으로 함
+  5) vw, vh : viewpoint width, viewpoint height 화면 기준
+    
+    - 상속 : 글자와 관련된 속성들이 주로 상속을 가짐
+    - 우선순위 :
+      1. 명시도 점수가 높은 선언이 우선
+         (!important > 인라인 선언 > 아이디(100점 정도) > 클래스(10점 정도) > 태그 > 전체 > 상속 )
+      2. 점수가 같은 경우 가장 마지막에 해석되는 선언이 우선
+      3. 명시도는 상속 규칙보다 우선
+      4. !important 가 적용된 선언 방식이 최우선

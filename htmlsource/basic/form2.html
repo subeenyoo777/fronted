@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+속성
+    1)value : radio, checkbox, option,submit,reset 필수 사용.  나머지는 선택.
+    2)readonly : value를 처음부터 보여준다면 readonly로 보통 막는다
+    3)required : 필수입력요소
+    4)autofocus : 커셔가 든다.
+    5)disabled : 이용가능하지 않음.
+    6)size(화면단 보여주는 크기), maxlength(최대 몇자리까지 가능?), min(), max
+    7)multiple : (파일..)여러개 선택가능
+    8)pattern : 입력을 허용하고 싶은 것. regex 이용한 입력형식 지정
+    9)placeholder : 무엇을 입력할지 사용자한테 알려주는 것
+    10)step : (특히 숫자)몇개씩 올라갈지 단위 지정
+    
+    legend : 제목같은 역할
+-->
+
+    <fieldset>
+      <legend>개인정보</legend>
+      <form action="" method="get"></form>
+      <div>
+        <input type="text" name="" id="" />
+      </div>
+    </fieldset>
+
+    <form action="" method="get">
+      <!-- [A-Za=z]{3} : 알파벳 3자리
+    [0-9]{3}-[0-9]{4}-[0-9]{4} : 숫자 3자리-숫자 4자리-숫자 4자리 
+    -->
+      <div>
+        <input type="text" name="code" id="" pattern="[A-Za-z]{3}" />
+        <input type="tel" name="tel" id="" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" />
+      </div>
+
+      <div>
+        <input type="file" name="" id="" multiple />
+      </div>
+      <div>
+        <label for="datemax">date1</label>
+        <input type="date" name="datemax" id="datemax" max="2025-04-01" min="2025-01-01" />
+      </div>
+
+      <div>
+        <label for="num">num</label>
+        <input type="number" name="num" id="num" max="10" min="3" />
+      </div>
+
+      <div>
+        <!-- lable의 for이랑 input  -->
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" value="하드코딩(홍길동)" disabled />
+      </div>
+
+      <div>
+        <label
+          >age
+          <input type="text" name="age" id="age" required autofocus size="10" maxlength="2" />
+        </label>
+      </div>
+
+      <div>
+        <label for="gender">성별</label>
+        <input type="checkbox" name="gender" id="" value="남" />남
+        <input type="checkbox" name="gender" id="" value="여" />여
+      </div>
+      <!-- name=홍길동&name=25&gender=남 -->
+
+      <div>
+        <select name="fruits" id="">
+          <option value="사과">사과</option>
+          <option value="포도">포도</option>
+          <option value="딸기">딸기</option>
+        </select>
+      </div>
+      <!-- 유땡빈&name=26&gender=여&fruits=사과 -->
+
+      <div>
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+      </div>
+    </form>
+  </body>
+</html>

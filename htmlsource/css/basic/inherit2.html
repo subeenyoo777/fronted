@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .area p {
+        color: red;
+      }
+      p {
+        color: blue !important;
+      }
+      #text {
+        color: green;
+      }
+
+      /* 선택자가 일치하면 위>아래 순서에 따라 아래 꺼이 실행되나, 
+      .area .. 우선순위가 높음 */
+    </style>
+  </head>
+  <body>
+    <div class="area">
+      <div id="text">
+        <p id="text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus quibusdam doloremque dolores libero
+          necessitatibus! Saepe magnam facilis perferendis, nihil quis esse asperiores, enim atque dignissimos nesciunt
+          temporibus nisi officia doloremque.
+        </p>
+        <p style="color: aqua">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus quibusdam doloremque dolores libero
+          necessitatibus! Saepe magnam facilis perferendis, nihil quis esse asperiores, enim atque dignissimos nesciunt
+          temporibus nisi officia doloremque.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

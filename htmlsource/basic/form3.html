@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>상품 주문서</h1>
+    <form action="">
+      <fieldset>
+        <legend>개인 정보</legend>
+        <li>
+          <label for="name">이름</label>
+          <input type="text" name="code" id="" pattern="[A-Za-z]{3}" placeholder="여백 없이 입력" />
+        </li>
+
+        <li>
+          <label for="name">연락처</label>
+          <input type="tel" name="tel" id="" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="연락 가능한 번호" />
+        </li>
+      </fieldset>
+
+      <fieldset>
+        <legend>배송지 정보</legend>
+
+        <li>
+          주소
+          <input type="text" name="주소" id="" />
+        </li>
+        <li>전화번호 <input type="tel" name="tel" id="" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" /></li>
+        <li>메모 <textarea name="" id="" rows="2" cols="40"></textarea></li>
+      </fieldset>
+
+      <fieldset>
+        <legend>주문 정보</legend>
+
+        <li>
+          <input type="checkbox" name="addr" id="" value="" placeholder="" />
+          <label for="addr">과테말라 안티구아 (100g)</label>
+          <input type="number" name="num" id="num" min="0" max="10" />개
+        </li>
+
+        <li>
+          <input type="checkbox" name="addr" id="" value="" placeholder="" />
+          <label for="addr">인도네시아 만델링 (100g)</label>
+          <input type="number" name="num" id="num" min="0" max="10" />개
+        </li>
+
+        <li>
+          <input type="checkbox" name="addr" id="" value="" placeholder="" />
+          <label for="addr">탐라는도다(블렌딩) (100g)</label>
+          <input type="number" name="num" id="num" min="0" max="10" />개
+        </li>
+      </fieldset>
+
+      <div>
+        <input type="submit" value="주문하기" />
+        <input type="reset" value="다시 작성" />
+
+        <button type="button">버튼</button>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+      </div>
+    </form>
+  </body>
+</html>
