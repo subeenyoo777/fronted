@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 여백 0 */
+      * {
+        box-sizing: border-box; /*padding과 border를 포함*/
+        margin: 0;
+        padding: 0; /*안쪽여백*/
+      }
+      /* body 배경색 : #ecf0f1 */
+      body {
+        background-color: #ecf0f1; /*color로 줘도 됨*/
+      }
+      /* wrapper :  max-width : 60rem, width : 100%*/
+      .wrapper {
+        width: 100%;
+        max-width: 60rem; /*크기 제한*/
+        margin: 2rem auto;
+      }
+      /* flexbg: flex 컨테이너 */
+      .flexbg {
+        display: flex; /*default는 자식들이 다 옆으로 감*/
+      }
+      /* main : 배경색 흰색, 안쪽여백 25 order 2*/
+      .flexbg main {
+        background-color: white;
+        padding: 25px;
+        order: 2;
+      }
+      .flexbg .sidebar {
+        padding: 25px;
+        width: 20%;
+      }
+      /* left : 배경색 #3498db, order 1*/
+      .flexbg .left {
+        background-color: #3498db;
+        order: 1;
+      }
+      /* right : 배경색 #34495e, order 3*/
+      .flexbg .right {
+        background-color: #34495e;
+        order: 3;
+      }
+
+      /*481 ~ 768  */
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          flex-wrap: wrap; /*다음 줄로 줄바꿈 */
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg main {
+          order: 1;
+          width: 100%;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+        .flexbg .right {
+          order: 3;
+        }
+      }
+
+      /* 0 ~ 480  */
+      @media screen and (max-width: 480px) {
+        .flexbg {
+          flex-wrap: wrap; /*다음 줄로 줄바꿈 */
+        }
+        .flexbg .sidebar {
+          width: 100%;
+        }
+        /* .flexbg main {
+          order: 1;
+          width: 100%;
+        } */
+        .flexbg .left {
+          order: 2;
+        }
+        .flexbg .right {
+          order: 3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eligendi aliquid ipsum nobis, vero dolorum
+          reprehenderit quam in ipsam dicta perspiciatis quia facilis sit adipisci a dolore. Ducimus, cupiditate, vero
+          veritatis itaque harum commodi provident reprehenderit dolor nesciunt temporibus eos consequatur velit neque
+          fugit soluta earum voluptas vitae mollitia delectus fuga. Qui rem, ea aperiam illum, officiis ullam pariatur
+          architecto eos possimus minus eveniet excepturi enim quasi inventore reprehenderit dolor dolorem alias quis
+          iure. Quibusdam adipisci quisquam aliquam, atque consequatur, non saepe accusantium, ab quia consectetur quae
+          sunt laborum dignissimos quas explicabo tenetur expedita magni quaerat eum vel porro sed?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eligendi aliquid ipsum nobis, vero dolorum
+          reprehenderit quam in ipsam dicta perspiciatis quia facilis sit adipisci a dolore. Ducimus, cupiditate, vero
+          veritatis itaque harum commodi provident reprehenderit dolor nesciunt temporibus eos consequatur velit neque
+          fugit soluta earum voluptas vitae mollitia delectus fuga. Qui rem, ea aperiam illum, officiis ullam pariatur
+          architecto eos possimus minus eveniet excepturi enim quasi inventore reprehenderit dolor dolorem alias quis
+          iure. Quibusdam adipisci quisquam aliquam, atque consequatur, non saepe accusantium, ab quia consectetur quae
+          sunt laborum dignissimos quas explicabo tenetur expedita magni quaerat eum vel porro sed?
+        </p>
+      </main>
+      <aside class="sidebar left">
+        <p>You might have some lastest posts here on the left</p>
+      </aside>
+      <aside class="sidebar right">
+        <p>You some other widgets here on the left</p>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      alert("head" + document.body);
+    </script>
+  </head>
+  <body>
+    <p>Hello world</p>
+
+    <ul>
+      <li>힝목</li>
+    </ul>
+    <div>Bye</div>
+
+    <script>
+      // for (let i = 0; i < document.body.childNodes.length; i++) {
+      //   console.log(document.body.childNodes[i]);
+      // }
+      // console.log("parentNode : " + document.body.parentNode);
+      // console.log("firstChild : " + document.body.firstChild);
+      // console.log("lastChild : " + document.body.lastChild);
+      // console.log("nextSibling : " + document.head.nextSibling);
+
+      for (let i = 0; i < document.body.children.length; i++) {
+        console.log(document.body.children[i]);
+      }
+
+      for (const element of document.body.children) {
+        console.log(element);
+      }
+
+      console.log("parentNode : " + document.body.parentElement);
+      console.log("firstChild : " + document.body.firstElementChild);
+      console.log("lastChild : " + document.body.lastElementChild);
+      console.log("nextSibling : " + document.head.nextElementSibling);
+    </script>
+  </body>
+</html>
+
+<!-- 
+Node : HTML 문서 안의 모든 것(태그, 텍스트, 주석, 공백 등)
+
+브라우저는 HTML, CSS 파싱(한줄씩 분석) => DOM 트리, CSS => CSSOM 트리
+자바스크립트에서 DOM 트리 접근 가능.
+
+ 1) 프로퍼티 이용 : childnodes(text node_공백_ 포함 모든 자식을 가지고 있음), 
+                    childern(실제 주로 사용,
+                    요소(태그) 노드만 가지고 있음)
+ 
+-->

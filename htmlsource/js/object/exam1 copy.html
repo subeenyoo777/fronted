@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>전화번호 마스킹</title>
+  </head>
+  <body>
+    <script>
+      function info() {
+        const userName = prompt("영어 이름 입력해주세요");
+        //let 타입변수
+        let userTel = prompt("전화번호 입력해주세요 (예: 01012345678)");
+
+        // 하이픈 제거
+        userTel = userTel.replace(/-/g, "");
+
+        // 전화번호 형식 확인 및 마스킹
+        if (userTel.length === 11) {
+          const first = userTel.substring(0, 3);
+          const middle = "####";
+          const last = userTel.substring(7);
+
+          const maskedTel = `${first}-${middle}-${last}`;
+
+          document.write(userName.toUpperCase() + "<br>");
+          document.write(maskedTel);
+        } else {
+          document.write(" 올바른 전화번호 형식이 아닙니다.");
+        }
+      }
+
+      info();
+    </script>
+  </body>
+</html>

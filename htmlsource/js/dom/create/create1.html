@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>header</h1>
+    <!-- 자식은 안 나온다. -->
+    <script>
+      //강제로 태그 만들어서 밀어넣어야 할 때가 있다.
+      // body 동적으로 구성
+
+      const info = function () {
+        let output = "";
+
+        output += "<ul>";
+        output += "<li>List1</li>";
+        output += "<li>List2</li>";
+        output += "<li>List3</li>";
+        output += "</ul>";
+
+        //body 태그 자식으로 생성
+        // innerHTML : 밀어넣기는 좋으나 전체가 바뀜.|| += 하면 기존 내용도 함께 넣어줄 수 있다.
+        // document.body.innerHTML = output;
+        document.body.innerHTML += output;
+      };
+
+      info();
+    </script>
+  </body>
+</html>

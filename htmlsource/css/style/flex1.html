@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+    }
+    /* 플랙스 컨테이너 */
+      .container {
+        display: flex; /*block, inline, inline-block, none, flex*/
+        flex-direction: row; 
+        /* row(default) : 좌우배치, flex 선언 시 안 해도 됨.
+            row-reverse : 작성코드 순서 반대되로 정렬
+        column : 밑으로 내려 하나의 컬럼처럼 보임
+        column-reverse : 작성 코드 순서 반대되로 아래로 내림
+        */
+    }
+      .container div {
+        background-color: silver;
+        width: 33.33%;
+        height: 200px;
+        margin: 0 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class=>flex-item1</div>
+      <div class=>flex-item2</div>
+      <div class=>flex-item3</div>
+    </div>
+  </body>
+</html>
+
+
+<!-- 
+<flex>
+    수평 배치 : float, inline-block 사용 
+     - float : 해제 코드 필요 / inline-block : 자동처리되는 공백있음 /  
+     - 수평 배치 개선된 방법으로 flex 나옴 
+     다음에 올 요소를 고려할 필요 없음
+ 
+ 1) container(상하, 좌우 배치되어야 할 아이템을 가지고 있는 부모 요소)
+    - display
+ 2) item
+
+     -->

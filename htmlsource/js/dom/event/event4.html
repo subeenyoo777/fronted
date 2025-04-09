@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <div><input type="radio" name="gender" id="" />남성 <input type="radio" name="gender" id="" />여성</div>
+  </head>
+  <body>
+    <script>
+      //사용자가 선택한 선별을 콘솔에 출력
+      const rdos = document.querySelectorAll("[type = 'radio']");
+
+      //방법1
+      // rdos[0].addEventListener("click", (e) => console.log(e.target.value));
+      // rdos[1].addEventListener("click", (e) => console.log(e.target.value));
+
+      //방법2
+      // rdos.forEach((rdo) => {
+      //   rdo.addEventListener("click", (e) => console.log(e.target.value));
+      // });
+
+      //방법3(이벤트 버블링)
+      const genderNode = document.querySelector("div");
+      genderNode.addEventListener("click", (e) => console.log(e.target.textContent));
+    </script>
+  </body>
+</html>

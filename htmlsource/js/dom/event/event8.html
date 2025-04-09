@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #p1 {
+        /*  display: none => 공간차지x(아예 없어진 것처럼 동작) <> block 
+                    = 아예 없앤다 (공간까지 사라짐)
+        /* visibility: hidden => 공간차지o(공간은 그대로 있음) <> visibility
+                    = 숨기기만 한다 (공간은 남겨둠) */
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">This is paragraph</p>
+    <button type="button">요소 숨김</button>
+    <button type="button">요소 보이기</button>
+
+    <script>
+      const btns = document.querySelectorAll("button");
+      const p1 = document.querySelector("#p1");
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          console.log(e.target);
+          if (e.target.textContent === "요소 숨김") {
+            p1.style.display = "none";
+          } else {
+            p1.style.display = "block";
+          }
+        });
+      });
+
+      //요소 숨김 클릭 시 p1 숨기기
+      //요소 보이기 클릭 시 p1 보이기
+    </script>
+  </body>
+</html>

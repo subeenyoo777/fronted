@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 숫자를 입력 받아 짝/홀수 구분하는 프로그램
+
+      let input = Number(prompt("숫자를 입력해주세요"));
+
+      // if (input % 2 == 0) {
+      //   // console.log("짝수");
+      //   document.write("<h3>짝수</h3>"); //
+      // } else {
+      //   // console.log("홀수");
+      //   document.write("<h3>홀수</h3>");
+      // }
+
+      //삼항 연산자 ver
+      document.write(input % 2 == 0 ? "<h3>짝수</h3>" : "<h3>홀수</h3>");
+    </script>
+  </body>
+</html>

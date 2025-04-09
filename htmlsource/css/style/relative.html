@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        vertical-align: top;
+      }
+      .box {
+        border: 1px solid;
+        padding: 10px;
+        position: relative;
+      }
+      .a {
+        background: blue;
+        left: 50px;
+        top: 50px;
+      }
+      .b {
+        background: red;
+        left: 50px;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    position : 요소의 위치 지정
+    1) relative : 요소 자신을 기준으로 배치
+    2) absolute : 위치 상 부모 요소를 기준으로 배치(없을 시 브라우저 기준임, 대부분의 경우 부모 지정)
+    3) fixed : 브라우저(뷰포트, 흰색화면)를 기준으로 배치
+    4) static(기본default)
+
+    (1+2)relative를 부모로 해서 absolute를 많이 사용함
+-->
+
+    <div class="box a">
+      <img src="../../image/bg.png" alt="" />
+    </div>
+    <div class="box b">
+      <img src="../../image/bg.png" alt="" />
+    </div>
+    <div>
+      <img src="../../image/bg.png" alt="" />
+    </div>
+    <div>
+      <img src="../../image/bg.png" alt="" />
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat incidunt nostrum odio? Velit ex voluptatem cumque
+      dolorem provident enim ipsum quam mollitia molestias asperiores distinctio, neque hic minus, quia, expedita
+      perferendis? Architecto natus, ea saepe ut quos consequuntur fuga voluptas mollitia facilis numquam error deleniti
+      dolorum delectus iusto ex dolores accusantium repellendus quis. Perferendis culpa ipsum excepturi ad eum corporis
+      corrupti nulla iure odit dicta autem sunt omnis tempora, aliquid quasi? Iusto iste unde reprehenderit eos
+      obcaecati, modi accusamus excepturi eum quidem. Reiciendis dolorem iure doloribus deleniti, ad asperiores dolore
+      laudantium quia error rerum. Praesentium ab amet molestiae facilis laudantium!
+    </p>
+  </body>
+</html>

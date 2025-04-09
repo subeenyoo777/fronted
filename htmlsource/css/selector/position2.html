@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .food-slide {
+        border: 2px solid green;
+        width: 800px;
+        height: 300px;
+        margin: 0 auto; /* = 화면 가운데(수평)*/
+        padding: 10px;
+        position: relative;
+      }
+      img {
+        width: 400px;
+        height: 300px;
+        float: left;
+      }
+      /* 배경색 : 333, 글자색 : 흰색, 가운데 정렬, 줄높이 : 50 */
+      .controls a {
+        color: white;
+        background-color: #333;
+        text-align: center;
+        line-height: 50px;
+        display: block;
+        position: absolute;
+        white-space: nowrap; /*공백있을시 엔터처리하지 말것*/
+        top: calc(50%- 25px);
+      }
+
+      .prev {
+        right: 100%;
+      }
+
+      .next {
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="food-slide">
+      <img src="../../image/food.jpg" alt="" />
+      <p>
+        이 스프가 보이십니까? 옛날 프랑스에서는 사실 먹을게 많이 부족했습니다. 그래서 유럽에서는 감자가 주된 그들의
+        주식이었죠. 그러한 배경이 있었기에 감자로 만들 요리 레시피는 굉장히 무궁히 많았답니다. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Impedit, facilis expedita! Pariatur, et. Earum aperiam ex quas alias
+        repellendus temporibus? Cumque quae ratione provident ut qui numquam quam modi debitis!
+      </p>
+      <div class="controls">
+        <a href="" class="prev">Previous Project</a>
+        <a href="" class="next">Next Project</a>
+      </div>
+    </div>
+  </body>
+</html>

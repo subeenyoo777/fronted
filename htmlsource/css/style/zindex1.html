@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* box : 너비 100, 높이 100, 배경색 임의, absolute
+         box-group : relative*/
+      .box-group {
+        position: relative;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      .box1 {
+        left: 50px;
+        top: 50px;
+        background-color: red;
+        z-index: 100;
+      }
+      .box2 {
+        left: 110px;
+        top: 70px;
+        background-color: green;
+        z-index: 1;
+      }
+      .box3 {
+        left: 70px;
+        top: 110px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <!-- 
+  z-index
+전제조건: 포지션이 적용된 요소/요소의 쌓임에서 우선순위 지정(큰 수가 우선순위 큰 것)   
+예 : 특정 상단 메뉴 계속 보여주고 싶을 때-->
+  <body>
+    <div class="box-group">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+    </div>
+  </body>
+</html>

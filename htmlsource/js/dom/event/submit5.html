@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>사칙 연산 계산기</h3>
+    <form action="" method="post">
+      <input type="text" name="num1" id="num1" size="10" />
+
+      <select name="op" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+
+      <input type="text" name="num2" id="num2" size="5" />
+      =
+      <input type="text" name="num3" id="result" size="5" />
+      <button type="submit">결과</button>
+    </form>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const num1 = e.target.num1;
+        const num2 = e.target.num2;
+        let op = e.target.op;
+
+        if (isNaN(parseInt(num1.value)) || isNaN(parseInt(num2.value))) {
+          document.querySelector("#result").value = "값을 넣어주세요";
+        } else {
+          const value1 = parseInt(num1.value);
+          const value2 = parseInt(num2.value);
+          let result = 0;
+
+          switch (op.value) {
+            case "+":
+              result = value1 + value2;
+              break;
+            case "-":
+              result = value1 - value2;
+              break;
+            case "*":
+              result = value1 * value2;
+              break;
+            case "/":
+              result = value1 / value2;
+              break;
+            case "%":
+              result = value1 % value2;
+              break;
+
+            default:
+              document.querySelector("#result").value = "연산을 다시 해주세요";
+              break;
+          }
+          document.querySelector("#result").value = result;
+        }
+      });
+    </script>
+  </body>
+</html>

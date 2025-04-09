@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* #p1 {
+        color: aliceblue;
+        font-family: "Courier New", Courier, monospace;
+        font-size: large;
+      } */
+    </style>
+  </head>
+  <body>
+    <p id="p1">This is paragraph</p>
+    <button type="button">눌러보세요</button>
+
+    <script>
+      // button 클릭 시 p1 스타일 변경
+      // 글자 색상, 글자 크기, 글꼴
+
+      let mdoe = document.querySelector("button").addEventListener("click", (e) => {
+        const p1 = document.querySelector("#p1");
+
+        p1.style.color = "red";
+        p1.style.fontFamily = "궁서체";
+        p1.style.fnotSize = "24px";
+      });
+    </script>
+  </body>
+</html>

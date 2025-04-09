@@ -17,27 +17,61 @@
         /* padding: 10px 15px 20px; 나머지는 마주보는 것으로 지정됨 */
       }
       span {
-        background-color: beige;
-        width: 100%; /*줘도 사용 못한다. inline 속성이 그렇기 때문*/
+        /* width: 100%; 줘도 사용 못한다. inline 속성이 그렇기 때문 */
         /* height: 100px; 이하동일 */
+        background-color: beige;
         padding: 10px;
+        display: inline-block;
+      }
+      div {
+        margin: 20px;
+        /* margin(바깥쪽 여백) : 시계방향(top, right, bottom, left) */
+      }
+      div a {
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        display: inline-block; /* 인라인처럼 옆으로 나열 + 블록처럼 width/height 설정 가능 */
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px; /*텍스트의 높이(=줄 간격)*/
+      }
+      p:nth-of-type(2) {
+        /* display: none; */
+        visibility: hidden;
       }
     </style>
   </head>
   <body>
     <!-- block(p, div) : 한 행을 다 사용함 / width : 100%, height :0 => 내용만큼 사용, 지정가능
-         inline(a, span)  : 내용만큼만 사용 / width,height 가질 수 없음.
-                            padding 가능           
+         inline(a, span)  : 내용만큼만 사용 / width,height 가질 수 없음. / 
+         상하(top, bottom) padding을 제대로 적용할 수 없음 (좌우는 적용됨)
+                            
+         display 기능: inline, bolock, inline-block, none(요소 안 보임)
+
+         hidden - 숨겨진 공간 잡음
+        <>none 잡지도 않음.
          -->
 
     <p>block level</p>
     <span>inline level</span>
+    <!-- 자동으로 공백 득어감 -->
+    <span>inline level2</span>
     <div>
       <a href="">1</a>
       <a href="">2</a>
       <a href="">3</a>
       <a href="">4</a>
       <a href="">5</a>
+    </div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatibus, nemo ipsa officiis reiciendis
+      laboriosam saepe ad voluptas, quam ex aliquam, amet accusamus totam sint harum fuga obcaecati voluptate odit.
+    </p>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur soluta sint, obcaecati eum, impedit distinctio
+      laborum voluptas excepturi harum doloribus tenetur iure vero voluptatibus, in esse ab adipisci ipsum laboriosam?
     </div>
   </body>
 </html>

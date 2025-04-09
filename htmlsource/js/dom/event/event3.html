@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* #target {
+        background-color: lightblue;
+      } */
+    </style>
+  </head>
+  <body id="target">
+    <!-- 라디오: 여러개 중 하나만 입력 하려고 할 때.  -->
+
+    <div><input type="radio" name="color" id="lightblue" />파랑 <input type="radio" name="color" id="green" />녹색</div>
+
+    <script>
+      //파랑 radio 클릭되면 body 배경색 파랑
+      //녹색 radio 클릭되면 body 배경색 녹색
+
+      // const rdos = document.querySelectorAll("[type = 'radio']");
+      // console.log(rdos[0]);
+      // console.log(rdos[1]);
+
+      // //  방법1.    전체 한꺼번에 하기
+      // // rdos[0].addEventListener("click", () => (document.body.style.backgroundColor = "lightblue"));
+      // // rdos[1].addEventListener("click", () => (document.body.style.backgroundColor = "green"));
+
+      // //  방법2.    펑션
+      function changeColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+
+      // rdos[0].addEventListener("click", () => changeColor("lightblue"));
+      // rdos[1].addEventListener("click", () => changeColor("green"));
+
+      // rdos[0].addEventListener("click", (e) => {
+      //   const value = e.target.value;
+      //   console.log(value);
+      // });
+
+      // rdos[1].addEventListener("click", (e) => {
+      //   const value = e.target.value;
+      //   console.log(value);
+      // });
+
+      // 이벤트 버블링 : 라디오 클릭 시 부모한테 이벤트 전달
+      const colorNode = document.querySelector("div");
+      // colorNode.addEventListener("click", (e) => console.log(e.target.textContent));
+      colorNode.addEventListener("click", (e) => changeColor(e.target.textContent));
+    </script>
+  </body>
+</html>

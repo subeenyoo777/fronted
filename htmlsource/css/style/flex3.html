@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport: 흰색 화면
+    device-width : 모바일로 화면 따라가줘.  
+    -->
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        border: 2px solid;
+      }
+
+      .container div {
+        /* width: 100px; */
+        height: 100px;
+        display: flex;
+        justify-content: center; /*안쪽 컨텐츠 가운데 정렬*/
+        align-items: center;
+        font-size: 30px;
+        flex-grow: 1;
+        /* 글자를 제외한 공간이 1의 비율로 같아짐. */
+        flex-basis: 0;
+        /* 컨텐츠까지 포함해서 동일해짐 */
+      }
+
+      .container .item:nth-child(1) {
+        background-color: red;
+      }
+
+      .container .item:nth-child(2) {
+        background-color: blue;
+      }
+
+      .container .item:nth-child(3) {
+        background-color: green;
+        order: 1;
+        flex-grow: 2;
+        /* 오더 default는 0.<>맨 앞으로 빼고 싶을 땐 -값으로 */
+      }
+
+      .container .item:nth-child(4) {
+        background-color: blueviolet;
+      }
+
+      .container .item:nth-child(5) {
+        background-color: antiquewhite;
+      }
+
+      .container .item:nth-child(6) {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Good Job</div>
+      <div class="item">A</div>
+      <div class="item">Hello World</div>
+      <!-- <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div> -->
+    </div>
+  </body>
+</html>

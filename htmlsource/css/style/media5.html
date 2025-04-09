@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 여백 0 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* body : 배경색 #333338, 글자색 #444  */
+      body {
+        background-color: #333338;
+        color: #444;
+      }
+      /* container : flex */
+      .container {
+        display: flex;
+      }
+      /* sidebar : 바깥여백 : 10, 안쪽여백 6, 배경색 #eee */
+      .sidebar {
+        margin: 10px;
+        padding: 6px;
+        background-color: #eee;
+
+        display: flex;
+        flex-direction: column; /*배치 자체를 위에서 > 아래로*/
+        justify-content: space-between;
+      }
+      /* panel:  바깥여백 : 10, 안쪽여백 20, 배경색 #fff */
+      .panel {
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="main-content">
+        <div class="panel">
+          <h1>Main Title</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate mollitia quia sapiente esse porro
+            molestias natus ipsa sequi aliquid et dolor, assumenda necessitatibus exercitationem sunt delectus possimus
+            similique aspernatur cum, amet inventore eum numquam? Quo nesciunt facere quas eaque consequuntur est id
+            cupiditate. Inventore vel necessitatibus quibusdam ducimus, cum eius!
+          </p>
+          <img src="../../image/bg.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate mollitia quia sapiente esse porro
+            molestias natus ipsa sequi aliquid et dolor, assumenda necessitatibus exercitationem sunt delectus possimus
+            similique aspernatur cum, amet inventore eum numquam? Quo nesciunt facere quas eaque consequuntur est id
+            cupiditate. Inventore vel necessitatibus quibusdam ducimus, cum eius!
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate mollitia quia sapiente esse porro
+            molestias natus ipsa sequi aliquid et dolor, assumenda necessitatibus exercitationem sunt delectus possimus
+            similique aspernatur cum, amet inventore eum numquam? Quo nesciunt facere quas eaque consequuntur est id
+            cupiditate. Inventore vel necessitatibus quibusdam ducimus, cum eius!
+          </p>
+          <h3>Subtitle</h3>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate mollitia quia sapiente esse porro
+            molestias natus ipsa sequi aliquid et dolor, assumenda necessitatibus exercitationem sunt delectus possimus
+            similique aspernatur cum, amet inventore eum numquam? Quo nesciunt facere quas eaque consequuntur est id
+            cupiditate. Inventore vel necessitatibus quibusdam ducimus, cum eius!
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate mollitia quia sapiente esse porro
+            molestias natus ipsa sequi aliquid et dolor, assumenda necessitatibus exercitationem sunt delectus possimus
+            similique aspernatur cum, amet inventore eum numquam? Quo nesciunt facere quas eaque consequuntur est id
+            cupiditate. Inventore vel necessitatibus quibusdam ducimus, cum eius!
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate mollitia quia sapiente esse porro
+            molestias natus ipsa sequi aliquid et dolor, assumenda necessitatibus exercitationem sunt delectus possimus
+            similique aspernatur cum, amet inventore eum numquam? Quo nesciunt facere quas eaque consequuntur est id
+            cupiditate. Inventore vel necessitatibus quibusdam ducimus, cum eius!
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate mollitia quia sapiente esse porro
+            molestias natus ipsa sequi aliquid et dolor, assumenda necessitatibus exercitationem sunt delectus possimus
+            similique aspernatur cum, amet inventore eum numquam? Quo nesciunt facere quas eaque consequuntur est id
+            cupiditate. Inventore vel necessitatibus quibusdam ducimus, cum eius!
+          </p>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <h3>Item 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, consequuntur!</p>
+        </div>
+
+        <div class="panel">
+          <h3>Item 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo accusantium repellat quam suscipit
+            dolorum dolorem, magnam, sunt voluptates incidunt quidem vero odit nihil nemo officiis! Aspernatur ducimus
+            rem culpa sit autem iure ipsam mollitia corrupti impedit quasi rerum dolorum nostrum veritatis cum
+            dignissimos a alias, aperiam omnis vel provident laborum.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Item 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo accusantium repellat quam suscipit
+            dolorum dolorem, magnam, sunt voluptates incidunt quidem vero odit nihil nemo officiis! Aspernatur ducimus
+            rem culpa sit autem iure ipsam mollitia corrupti impedit quasi rerum dolorum nostrum veritatis cum
+            dignissimos a alias, aperiam omnis vel provident laborum.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Item 4</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo accusantium repellat quam suscipit
+            dolorum dolorem, magnam, sunt voluptates incidunt quidem vero odit nihil nemo officiis! Aspernatur ducimus
+            rem culpa sit autem iure ipsam mollitia corrupti impedit quasi rerum dolorum nostrum veritatis cum
+            dignissimos a alias, aperiam omnis vel provident laborum.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
