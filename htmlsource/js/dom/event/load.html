@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // body가 완성된 이후에 script 작성하길 권면.
+      // or 문서 로드 완료 시 코드 수행
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector("input");
+        btn.addEventListener("click", () => alert("hello"));
+      });
+
+      // window.onload = () => {
+      //   const btn = document.querySelector("input");
+      //   btn.addEventListener("click", () => alert("hello"));
+      // };
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Hello" />
+  </body>
+</html>

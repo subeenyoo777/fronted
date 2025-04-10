@@ -19,9 +19,9 @@
 
         function modifyText() {
           //t2 글자(two? three?) 가져오기
-
           document.querySelector("#t2");
           t2.textContent = t2.textContent === "two" ? "three" : "two";
+          // 조건 ? 참일 때 값 : 거짓일 때 값
         }
 
         document.querySelector("#outside").addEventListener("click", modifyText);

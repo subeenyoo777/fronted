@@ -14,22 +14,13 @@
 
       img.addEventListener("click", (e) => {
         if (!mode) {
-          img.src = "./pic_bulbon.gif";
+          img.src = "./pic_bulbon.gif"; // 루트 폴더 기준 절대 경로
           mode = true;
         } else {
           img.src = "./pic_bulboff.gif";
           mode = false;
         }
       });
-
-      //절대와 상대경로 이용해서 작성해보자.
-      // document.querySelector("img").addEventListener("click", (e) => {
-      //   if ((img.src = "./pic_bulbon.gif")) {
-      //     img.src = "./pic_bulboff.gif";
-      //   } else if ((img.src = "./pic_bulboff.gif")) {
-      //     img.src = "./pic_bulbon.gif";
-      //   }
-      // }
     </script>
   </body>
 </html>
