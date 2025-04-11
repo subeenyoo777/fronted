@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="exec"></p>
+    <script>
+      const origin = "Javascript Query Ajax";
+
+      //정규식 생성... 방법보다 아래 방법을 더 많이 사용
+      //   const regEx = new RegExp("Ajax");
+      const regEx = /Ajzx/;
+
+      // 자바스크립트 메소드 이용
+      console.log("exec() : ", regEx.exec(origin));
+      //"Ajax" index:17 input:"Javascript Query Ajax"   length:1 groups:undefined
+
+      //true
+      document.querySelector("#exec").textContent = regEx.exec(origin);
+      console.log("test() : ", regEx.test(origin));
+
+      console.log("match() : ", origin.match(regEx));
+
+      console.log("search() : ", origin.search(regEx));
+
+      const re = /(\w+)\s(\w+)/;
+      const origin2 = "John Smith";
+
+      //이름의 앞 뒤를 교환
+      console.log(origin2.match(re));
+
+      const newName = origin2.replace(re, "$2, $1"); //출력 : Smith, John
+      console.log(newName);
+
+      // 0은 패턴이 일치 문자를 반환.
+      // 0:"John Smith"  1:"John"    2:"Smith"groups:undefinedindex:0input: "John Smith"length:3[[Prototype]]:Array(0)
+
+      //() : 캡쳐링 기능
+      //(?:) : 캡쳐링 비활성화
+      const ko = "kokokoko";
+      console.log("ko match:", ko.match(/(?:ko)+/));
+    </script>
+  </body>
+</html>

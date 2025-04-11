@@ -1,0 +1,37 @@
+[동기식 처리]
+요청하면  >> 응답을 기다리는 것
+웹의 기본방식.
+예) 서버에 요청하면, 관련 데이터를 바로 보내주는 것.
+
+<>[비동기식]
+응답을 기다려서 무언가 실제로 하지 않는 것
+
+
+서버와 클라이언트
+
+하드웨어적 서버
+소프트웨어 서버 - 리눅스(유닉스), 윈도우즈서버 설치된 서버
+
+Ajax(Asynchronous JavaScript and XML)
+ - 비동기식 자바스크립트와 XML(=JSON), 요새 추세!
+ - 비동기식 요청 처리
+    1) 자바스크립트 코드(기본)
+    2) jQuery 코드
+   ---3,4번 많이 하는 추세------------------
+    3) fetch 사용
+    4) axios 사용
+
+
+JSON
+서버와 클라이언트가 주고받는 데이터 형식
+
+자바스크립트 객체
+ {id: 0, price: 70000, title:"Blossom Dress"}
+
+Json(JavaScript Object Notation) : 자바스크립트 객체 문법으로 데이터 표현하기 위한 문자기반의 포맷
+{
+    "name" : "Molecule Man".
+    "age:   : 29,
+    "secertIdentity" : "Dan Jukes",
+    "powers" : ["Raditation resistance", "Turning tiny", "Raditaion blast"]
+}

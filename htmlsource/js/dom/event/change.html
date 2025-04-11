@@ -9,11 +9,11 @@
     <form action="" method="post">
       <div>
         <label for="">이름1</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" value="" />
       </div>
       <div>
         <label for="">이름2</label>
-        <input type="text" name="name2" id="name2" value="ABCDEF" />
+        <input type="text" name="name2" id="name2" value="ABCEDF" />
       </div>
       <div>
         <select name="fruit" id="fruit">
@@ -29,7 +29,7 @@
 
     <script>
       ///change , input, blur 이벤트
-      //change : 요소 변경이 끝나면 발생
+      //change : 요소 <변경>이 끝나면 발생,  변경이 전제조건.
       // input : 값을 수정할 때마다 발생
       //blur :  기본값에 대해서도 이벤트 발생
 
@@ -41,9 +41,8 @@
       //사용자 입력값을 가져와서 대문자로 변경한 후 다시 보여주기, name 자체가 이벤트 일어나는 대상
       name.addEventListener("change", (e) => (e.target.value = e.target.value.toLowerCase()));
 
-      name2.addEventListener("input", (e) => {
-        e.target.value = e.target.value.toLowerCase();
-      });
+      // name2.addEventListener("input", (e) => (e.target.value = e.target.value.toLowerCase()));
+
       name2.addEventListener("blur", (e) => (e.target.value = e.target.value.toLowerCase()));
     </script>
   </body>
